@@ -1,5 +1,10 @@
 public class Demo03 {
     public static void main(String[] args) {
-        System.out.println(new ShippingCostCalculator().cost(new Shipment("EXPRESS", 2.0)));
+        Shipment s1 = new StandardShipment(2.0);
+        Shipment s2 = new ExpressShipment(2.0);
+        Shipment s3 = new OvernightShipment(2.0);
+        System.out.println(s1.calculateCost());
+        System.out.println(s2.calculateCost());
+        System.out.println(s3.calculateCost());
     }
 }
