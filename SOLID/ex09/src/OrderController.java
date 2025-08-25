@@ -1,7 +1,12 @@
 public class OrderController {
-    void create(String id){
-        SqlOrderRepository repo = new SqlOrderRepository(); // hard dependency
-        repo.save(id);
-        System.out.println("Created order: " + id);
+    private final OrderRepository orderRepository;
+
+    public OrderController(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
+    public void create(Order order) {
+        orderRepository.save(order);
+        System.out.println("Created order: " + order.getId());
     }
 }
