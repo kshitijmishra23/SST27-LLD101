@@ -1,6 +1,6 @@
 public class Payment {
     double amount;
-    Payment(double a){ amount=a; }
+    // Payment(double a){ amount=a; }
 
     //Getter
     public double getAmount() {
