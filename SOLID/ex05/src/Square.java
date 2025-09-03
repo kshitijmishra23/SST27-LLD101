@@ -1,5 +1,20 @@
 
-public class Square extends Rectangle {
-    @Override void setWidth(int w){ this.w = this.h = w; }
-    @Override void setHeight(int h){ this.w = this.h = h; }
+public class Square {
+    private final int side;
+    
+    public Square(int side) {
+        this.side = side;
+    }
+    
+    public int getSide() {
+        return side;
+    }
+    
+    public int calculateArea() {
+        return side * side;
+    }
+    
+    public int calculatePerimeter() {
+        return 4 * side;
+    }
 }
