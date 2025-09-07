@@ -1,0 +1,1 @@
+class InMemoryOrderRepository implements OrderRepository { public void save(String id){ System.out.println("Saved order " + id + " to InMemory"); } }

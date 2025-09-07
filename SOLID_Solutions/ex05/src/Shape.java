@@ -1,0 +1,1 @@
+interface Shape { int area(); }
