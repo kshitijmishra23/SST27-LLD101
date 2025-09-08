@@ -1,17 +1,17 @@
 package beverages_decorator;
 
 public class Client {
+    public static void main(String[] args) {
+        Beverage coffee = new Cappuccino();
+        System.out.println("Base Coffee: " + coffee.cost());
 
-	public static void main(String[] args) {
-		
+        coffee = new MilkDecorator(coffee);
+        System.out.println("With Milk: " + coffee.cost());
 
-		
-		Beverage coffee = new Cappuccino();
-        System.out.println("Coffee");
-		System.out.println(coffee.cost());
-		
-		
+        coffee = new SugarDecorator(coffee);
+        System.out.println("With Milk & Sugar: " + coffee.cost());
 
-	}
-
+        Beverage latte = new SugarDecorator(new MilkDecorator(new Latte()));
+        System.out.println("Latte with Milk & Sugar: " + latte.cost());
+    }
 }
